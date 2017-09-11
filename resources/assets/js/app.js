@@ -35,16 +35,17 @@ const app = new Vue({
 	    		var windowHeight = $(window).height();
 	    		var scrollTop = $(window).scrollTop();
 	    		var element = $('#paralax');
-	    		var elementFromtop = (element.offset().top) - (element.height() * 1.7);
+	    		var elementFromtop = (element.offset().top - 100) * -1;
 	    		var badImag = $('figure.bad-imag');
 	    		var goodImage = $('.good-img');
-	    		var badWidth = (scrollTop * 20) / (windowHeight + 100) + "vw";
+	    		var badWidth = ((scrollTop) + (elementFromtop) ) / 7 + "vw";
 
 	    		if(scrollTop > elementFromtop){
 	    			goodImage.css({
 	    				'width': badWidth
 	    			});
-	    			console.log(badWidth + " " + elementFromtop);
+	    			console.log("el from top = " + elementFromtop);
+	    			console.log("bad width = " + badWidth);
 	    		}
 
     		});
