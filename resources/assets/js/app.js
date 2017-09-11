@@ -38,7 +38,7 @@ const app = new Vue({
 	    		var elementFromtop = (element.offset().top - 100) * -1;
 	    		var badImag = $('figure.bad-imag');
 	    		var goodImage = $('.good-img');
-	    		var badWidth = ((scrollTop) + (elementFromtop) ) / 7 + "vw";
+	    		var badWidth = ((scrollTop) + (elementFromtop) ) / 6 + "vw";
 
 	    		if(scrollTop > elementFromtop){
 	    			goodImage.css({
