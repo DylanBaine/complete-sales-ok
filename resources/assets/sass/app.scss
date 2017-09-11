@@ -1,0 +1,166 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+// Vueify
+@import "node_modules/vuetify/dist/vuetify";
+
+
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+a:hover{
+	text-decoration: none;
+}
+.full-height {
+    height: 100vh;
+}
+
+.half-height {
+	height: 50vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.absolute{
+	position: absolute;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+#loader{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+#app{
+	position: relative;
+	z-index: 2;
+
+}
+
+#master-header{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: rgba(0, 0, 0, .2);
+	overflow: hidden;
+	color: white;
+	text-shadow: 1px 1px 5px black;
+	margin: 0;
+	width: 100%;
+	height: 90vh;
+
+	.absolute{
+		background-color: rgba(0, 0, 0, .4); 
+		right: 0;
+		z-index: 2;
+		transform: skew(-26deg);
+	}
+
+	.header-inner{
+		z-index: 3;
+	}
+	p{
+		font-size: 20px;
+	}
+
+}
+
+#featured-trailers{
+
+	position: relative;
+	top: -75px;
+
+	header{
+	    box-shadow: 9px -11px 30px black;
+	    background: #eeeff1;
+	    position: relative;
+	    border-radius: 20px;
+	    height: 30vh;
+	    margin-bottom: 20px;
+	}
+}
+
+#paralax{
+
+	.cont{
+		position: relative;
+		height: 200vh;
+		overflow: hidden;
+		background-color: #696666;
+	}
+
+	figure{
+		height: 100%;
+		background-size: 100vw 200vh;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment: fixed;
+		width:100%;
+	}
+	figure.good-img{
+		width: 0;
+		z-index: 3;
+		right: 0;
+	}
+	figcaption{
+		position: relative;
+		color: white;
+		opacity: 1;
+		z-index: 4;
+		background-color: rgba(0, 0, 0, .4);
+		padding: 20px;
+		border-radius: 10px;
+	}
+	.inner{		
+		background-color: rgba(0, 0, 0, .4);
+	}
+}
+#product-list{
+
+}
+
+[v-cloak] {display: none;}
