@@ -15,15 +15,10 @@ Route::get('/', function () {
     return view('front-end.welcome');
 });
 
-Route::get('logout-secure', function(){
-	return view('auth.logout');
-});
+
 Route::post('logout', 'Auth\LoginController@logout');
 
-
 Auth::routes();
-
-//Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'home'], function (){
 	Route::get('/', 'HomeController@index');

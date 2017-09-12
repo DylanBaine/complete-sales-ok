@@ -40,4 +40,5 @@ class LoginController extends Controller
     public function logoutForm(){
         return view('auth.logout');
     }
+
 }
