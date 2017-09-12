@@ -8,6 +8,8 @@
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+//Font Awesome
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
 // Vueify
 @import "node_modules/vuetify/dist/vuetify";
@@ -122,6 +124,22 @@ a:hover{
 	    height: 30vh;
 	    margin-bottom: 20px;
 	}
+}
+
+#product-list{
+	position: relative;
+
+	header{
+	    position: relative;
+	    border-radius: 20px;
+	    height: 30vh;
+	    margin-bottom: 20px;
+
+	    button{
+	    	left: 10px;
+	    	top: 10px;
+	    }
+	}	
 }
 
 #paralax{

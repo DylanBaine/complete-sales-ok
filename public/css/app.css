@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);@charset "UTF-8";
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -28458,6 +28458,22 @@ a:hover {
   border-radius: 20px;
   height: 30vh;
   margin-bottom: 20px;
+}
+
+#product-list {
+  position: relative;
+}
+
+#product-list header {
+  position: relative;
+  border-radius: 20px;
+  height: 30vh;
+  margin-bottom: 20px;
+}
+
+#product-list header button {
+  left: 10px;
+  top: 10px;
 }
 
 #paralax .cont {

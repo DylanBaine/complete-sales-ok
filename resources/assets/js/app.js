@@ -23,11 +23,16 @@ Vue.component('auth-nav', require('./components/AuthNav.vue'));
 Vue.component('master-header', require('./components/MasterHeader.vue'));
 Vue.component('featured-trailer', require('./components/FeaturedTrailer.vue'));
 Vue.component('paralax-break', require('./components/ParalaxBreak.vue'));
+Vue.component('auth-nav', require('./components/AuthNav.vue'));
+Vue.component('layout', require('./components/Layout'));
 
 Vue.use(Vuetify);
 
 const app = new Vue({
     el: '#app',
+    data: {
+    	hidden: true
+    },
     methods: {
     	runPralaxBreak(){
     		$(document).ready(function(){
@@ -49,10 +54,7 @@ const app = new Vue({
 	    		}
 
     		});
-		}, 
-		moveFeaturedTitleUp(){
-
-		}
+		},
     },
     created(){
     	window.addEventListener('scroll', this.runPralaxBreak);

@@ -17,15 +17,28 @@
 
     <div id="loader"><h1>Loading Perfection...</h1></div>
 
-    <div v-cloak id="app" class="row">
-        
-        @yield('content')
+    
+    <div v-cloak id="app">
+        @if(Auth::user())
+            
+        <layout menu="
+            <a href='/'>Home</a>
+        ">
 
-        <v-footer class="pa-3">
-            <div>© @{{ new Date().getFullYear() }}</div>
-        </v-footer>
+            @yield('content')
+        </layout>
 
+        @else
+            
+            @yield('content')
+
+        @endif
     </div>
+
+
+
+
+
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>

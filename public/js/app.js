@@ -808,11 +808,16 @@ Vue.component('auth-nav', __webpack_require__(51));
 Vue.component('master-header', __webpack_require__(54));
 Vue.component('featured-trailer', __webpack_require__(57));
 Vue.component('paralax-break', __webpack_require__(60));
+Vue.component('auth-nav', __webpack_require__(51));
+Vue.component('layout', __webpack_require__(63));
 
 Vue.use(__WEBPACK_IMPORTED_MODULE_0_vuetify___default.a);
 
 var app = new Vue({
   el: '#app',
+  data: {
+    hidden: true
+  },
   methods: {
     runPralaxBreak: function runPralaxBreak() {
       $(document).ready(function () {
@@ -833,8 +838,7 @@ var app = new Vue({
           console.log("bad width = " + badWidth);
         }
       });
-    },
-    moveFeaturedTitleUp: function moveFeaturedTitleUp() {}
+    }
   },
   created: function created() {
     window.addEventListener('scroll', this.runPralaxBreak);
@@ -56455,152 +56459,34 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
-/* harmony default export */ __webpack_exports__["default"] = ({
-	mounted: function mounted() {
-		console.log('AuthNav is mounted');
-	}
-});
+/* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
 /* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('nav', {
-    staticClass: "navbar navbar-default navbar-static-top"
-  }, [_c('div', {
-    staticClass: "container"
-  }, [_vm._m(0), _vm._v(" "), _c('div', {
-    staticClass: "collapse navbar-collapse",
+  return _c('v-navigation-drawer', {
+    staticClass: "grey darken-4",
     attrs: {
-      "id": "app-navbar-collapse"
+      "permanent": "",
+      "fixed": "",
+      "light": "",
+      "right": ""
     }
-  }, [_c('ul', {
-    staticClass: "nav navbar-nav"
-  }, [_vm._v("\n                 \n            ")]), _vm._v(" "), _c('ul', {
-    staticClass: "nav navbar-nav navbar-right"
-  }, [_vm._v("\n                @if (Auth::guest())\n                    "), _vm._m(1), _vm._v(" "), _vm._m(2), _vm._v("\n                @else\n                    "), _c('li', {
-    staticClass: "dropdown"
-  }, [_vm._m(3), _vm._v(" "), _c('ul', {
-    staticClass: "dropdown-menu",
-    attrs: {
-      "role": "menu"
-    }
-  }, [_c('li', [_c('a', {
-    attrs: {
-      "href": "",
-      "onclick": "event.preventDefault();\n                                             document.getElementById('logout-form').submit();"
-    }
-  }, [_vm._v("\n                                    Logout\n                                ")]), _vm._v(" "), _c('form', {
+  }, [_c('v-card', {
+    staticClass: "ma-3",
     staticStyle: {
-      "display": "none"
-    },
-    attrs: {
-      "id": "logout-form",
-      "action": "",
-      "method": "POST"
+      "margin-top": "100px !important"
     }
-  }, [_vm._v("\n                                    " + _vm._s(_vm.csrf_field()) + "\n                                ")])])])]), _vm._v("\n                @endif\n            ")])])])])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "navbar-header"
-  }, [_c('button', {
-    staticClass: "navbar-toggle collapsed",
+  }, [_c('v-list', {
+    staticClass: "py-0",
     attrs: {
-      "type": "button",
-      "data-toggle": "collapse",
-      "data-target": "#app-navbar-collapse"
+      "dense": ""
     }
-  }, [_c('span', {
-    staticClass: "sr-only"
-  }, [_vm._v("Toggle Navigation")]), _vm._v(" "), _c('span', {
-    staticClass: "icon-bar"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "icon-bar"
-  }), _vm._v(" "), _c('span', {
-    staticClass: "icon-bar"
-  })]), _vm._v(" "), _c('a', {
-    staticClass: "navbar-brand",
-    attrs: {
-      "href": ""
-    }
-  })])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('li', [_c('a', {
-    attrs: {
-      "href": ""
-    }
-  }, [_vm._v("Login")])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('li', [_c('a', {
-    attrs: {
-      "href": ""
-    }
-  }, [_vm._v("Register")])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('a', {
-    staticClass: "dropdown-toggle",
-    attrs: {
-      "href": "#",
-      "data-toggle": "dropdown",
-      "role": "button",
-      "aria-expanded": "false"
-    }
-  }, [_c('span', {
-    staticClass: "caret"
-  })])
-}]}
+  }, [_vm._t("default")], 2)], 1)], 1)
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
@@ -56930,6 +56816,181 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
      require("vue-hot-reload-api").rerender("data-v-4f669c57", module.exports)
+  }
+}
+
+/***/ }),
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var Component = __webpack_require__(38)(
+  /* script */
+  __webpack_require__(64),
+  /* template */
+  __webpack_require__(65),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "C:\\Users\\Brayden\\Desktop\\WebDev\\php\\CompleteSales\\resources\\assets\\js\\components\\Layout.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Layout.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-79cd05c5", Component.options)
+  } else {
+    hotAPI.reload("data-v-79cd05c5", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 64 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['authName', 'menu'],
+  data: function data() {
+    return {
+      drawer: null,
+      items: [{ title: 'See Site', link: '/' }, { title: 'Home', link: '/home' }, { title: 'logout', link: '/logout-secure' }],
+      right: null
+    };
+  }
+});
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('v-app', {
+    attrs: {
+      "id": "example-2",
+      "toolbar": ""
+    }
+  }, [_c('v-navigation-drawer', {
+    attrs: {
+      "temporary": "",
+      "light": "",
+      "overflow": "",
+      "absolute": ""
+    },
+    model: {
+      value: (_vm.drawer),
+      callback: function($$v) {
+        _vm.drawer = $$v
+      },
+      expression: "drawer"
+    }
+  }, [_c('v-list', {
+    staticClass: "pa-1"
+  }, [_c('v-list-tile-content', [_c('v-list-tile-title', [_vm._v(_vm._s(_vm.authName))])], 1)], 1), _vm._v(" "), _c('v-list', {
+    staticClass: "pt-0",
+    attrs: {
+      "dense": ""
+    }
+  }, [_c('v-divider'), _vm._v(" "), _vm._l((_vm.items), function(item) {
+    return _c('v-list-tile', {
+      key: item.title,
+      on: {
+        "click": function($event) {}
+      }
+    }, [_c('v-list-tile-content', [_c('a', {
+      attrs: {
+        "href": item.link
+      }
+    }, [_c('v-list-tile-title', [_vm._v(_vm._s(item.title))])], 1)])], 1)
+  })], 2)], 1), _vm._v(" "), _c('v-toolbar', {
+    staticClass: "deep-orange",
+    attrs: {
+      "fixed": "",
+      "dark": ""
+    }
+  }, [_c('v-btn', {
+    staticClass: " blue darken-4",
+    attrs: {
+      "fab": ""
+    },
+    on: {
+      "click": function($event) {
+        $event.stopPropagation();
+        _vm.drawer = !_vm.drawer
+      }
+    }
+  }, [_c('i', {
+    staticClass: "fa fa-bars"
+  })]), _vm._v(" "), _c('v-toolbar-title', [_vm._v("Toolbar")])], 1), _vm._v(" "), _c('main', [_vm._t("default")], 2), _vm._v(" "), _c('v-footer', {
+    staticClass: "pa-3"
+  }, [_c('div', [_vm._v("© @" + _vm._s(new Date().getFullYear()))])])], 1)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-79cd05c5", module.exports)
   }
 }
 
