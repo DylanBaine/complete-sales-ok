@@ -2,10 +2,12 @@
 
 @section('content')
 
+@foreach($homePage as $home)
+
     <master-header 
-	    header="Welcome to my site!" 
-	    sub="This is a cool website! We have a lot of cool stuff. Come have a look at our new, cutting edge, technology. You wont regret it... We promise." 
-	    bg="https://placeimg.com/1000/480/any">
+	    header="{{$home->top_hero_headline}}" 
+	    sub="{{$home->top_hero_subline}}" 
+	    bg="{{$home->top_hero_image}}">
 		
     </master-header>
 
@@ -13,12 +15,12 @@
 
     	<header class="flex-center">
 
-			<a href="https://pencilrocketcreative.com"><v-btn info raised class="absolute top-right">See More trailers</v-btn></a>
+			<a href="{{$home->featured_tab_cta_link}}"><v-btn info raised class="absolute top-right">{{$home->featured_tab_cta}}</v-btn></a>
 
     		<div class="header-inner col-md-9">
-    			<h2>Featured Trailers</h2>
+    			<h2>{{$home->featured_tab_headline}}</h2>
     			<p class="col-md-9 col-md-offset-3">
-    				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur omnis qui repellendus mollitia nulla, dicta cum ad et architecto atque autem asperiores porro fugit voluptas voluptates sunt aperiam similique minus.
+    				{{$home->featured_tab_subline}}
     			</p>
     		</div>
     	</header>
@@ -59,11 +61,11 @@
     <section id="paralax">
 
     	<paralax-break 
-	    	headline="Our aluminum trailers are 75% lighter than normal steal trailers. They can last 60% longer than any other trailer on the market. This means that buying one of our trailers is an investment. They hold their value." 
-	    	cta="Learn more about our aluminum trailers."
-	    	cta_link="https://pencilrocketcreative.com"
-	    	good_img="https://www.wired.com/wp-content/uploads/2017/08/nluFhCaU.jpg"
-	    	bad_img="https://www.wired.com/wp-content/uploads/2017/08/Bayou_02.jpg">
+	    	headline="{{$home->paralax_text}}" 
+	    	cta="{{$home->paralax_cta}}"
+	    	cta_link="{{$home->paralax_cta_link}}"
+	    	good_img="{{$home->paralax_good_image}}"
+	    	bad_img="{{$home->paralax_bad_image}}">
 
     	</paralax-break>
     	
@@ -72,12 +74,12 @@
     <section id="product-list" class="container">
     	<header class="flex-center">
 
-			<a href="#"><v-btn info raised class="absolute top-right">See More trailers</v-btn></a>
+			<a href="products"><v-btn info raised class="absolute top-right">See More of what we have</v-btn></a>
 
     		<div class="header-inner col-md-9 text-right">
-    			<h2>All of our products.</h2>
+    			<h2>{{$home->all_products_headline}}</h2>
     			<p class="col-md-9 col-md-offset-3">
-    				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur omnis qui repellendus mollitia nulla, dicta cum ad et architecto atque autem asperiores porro fugit voluptas voluptates sunt aperiam similique minus.
+    				{{$home->all_products_subline}}
     			</p>
     		</div>
     	</header>  
@@ -115,6 +117,7 @@
 
 
     </section>
+@endforeach
 
 
 @stop

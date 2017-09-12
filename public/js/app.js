@@ -814,38 +814,68 @@ Vue.component('layout', __webpack_require__(63));
 Vue.use(__WEBPACK_IMPORTED_MODULE_0_vuetify___default.a);
 
 var app = new Vue({
-  el: '#app',
-  data: {
-    hidden: true
-  },
-  methods: {
-    runPralaxBreak: function runPralaxBreak() {
-      $(document).ready(function () {
+	el: '#app',
+	data: {
+		hidden: true
+	},
+	methods: {},
+	created: function created() {},
+	destroyed: function destroyed() {}
+});
 
-        var windowHeight = $(window).height();
-        var scrollTop = $(window).scrollTop();
-        var element = $('#paralax');
-        var elementFromtop = (element.offset().top - 100) * -1;
-        var badImag = $('figure.bad-imag');
-        var goodImage = $('.good-img');
-        var badWidth = (scrollTop + elementFromtop) / 6 + "vw";
+$(window).scroll(function () {
 
-        if (scrollTop > elementFromtop) {
-          goodImage.css({
-            'width': badWidth
-          });
-          console.log("el from top = " + elementFromtop);
-          console.log("bad width = " + badWidth);
-        }
-      });
-    }
-  },
-  created: function created() {
-    window.addEventListener('scroll', this.runPralaxBreak);
-  },
-  destroyed: function destroyed() {
-    window.addEventListener('scroll', this.runPralaxBreak);
-  }
+	var windowHeight = $(window).height();
+	var scrollTop = $(window).scrollTop();
+	var element = $('#paralax');
+	var elementFromtop = (element.offset().top - 100) * -1;
+	var badImag = $('figure.bad-imag');
+	var goodImage = $('.good-img');
+	var badWidth = (scrollTop + elementFromtop) / 6 + "vw";
+
+	if (scrollTop > elementFromtop) {
+		goodImage.css({
+			'width': badWidth
+		});
+		console.log("el from top = " + elementFromtop);
+		console.log("bad width = " + badWidth);
+	}
+});
+
+$(document).ready(function () {
+
+	$('#hero-image').change(function () {
+		$('#header-image-form').css({
+			'background': 'url(' + window.URL.createObjectURL(this.files[0]) + ')',
+			'background-size': 'cover',
+			'background-position': 'center',
+			'backgroung-repeat': 'no-repeat'
+		});
+
+		console.log(window.URL.createObjectURL(this.files[0]));
+	});
+
+	$('#good-image').change(function () {
+		$('#good-image-form').css({
+			'background': 'url(' + window.URL.createObjectURL(this.files[0]) + ')',
+			'background-size': 'cover',
+			'background-position': 'center',
+			'backgroung-repeat': 'no-repeat'
+		});
+
+		console.log(window.URL.createObjectURL(this.files[0]));
+	});
+
+	$('#bad-image').change(function () {
+		$('#bad-image-form').css({
+			'background': 'url(' + window.URL.createObjectURL(this.files[0]) + ')',
+			'background-size': 'cover',
+			'background-position': 'center',
+			'backgroung-repeat': 'no-repeat'
+		});
+
+		console.log(window.URL.createObjectURL(this.files[0]));
+	});
 });
 
 /***/ }),
@@ -56909,6 +56939,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['authName', 'menu'],
@@ -56935,8 +56970,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "temporary": "",
       "light": "",
-      "overflow": "",
-      "absolute": ""
+      "overflow": ""
     },
     model: {
       value: (_vm.drawer),
@@ -56958,13 +56992,21 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       on: {
         "click": function($event) {}
       }
-    }, [_c('v-list-tile-content', [_c('a', {
+    }, [_c('a', {
+      staticStyle: {
+        "display": "inline-block",
+        "width": "100%",
+        "height": "100%"
+      },
       attrs: {
         "href": item.link
       }
-    }, [_c('v-list-tile-title', [_vm._v(_vm._s(item.title))])], 1)])], 1)
+    }, [_c('v-list-tile-content', [_c('v-list-tile-title', [_vm._v(_vm._s(item.title))])], 1)], 1)])
   })], 2)], 1), _vm._v(" "), _c('v-toolbar', {
     staticClass: "deep-orange",
+    staticStyle: {
+      "z-index": "999"
+    },
     attrs: {
       "fixed": "",
       "dark": ""

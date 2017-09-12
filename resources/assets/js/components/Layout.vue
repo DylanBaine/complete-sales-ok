@@ -5,7 +5,7 @@
       v-model="drawer"
       light
       overflow
-      absolute
+      
     >
       <v-list class="pa-1">
           <v-list-tile-content>
@@ -18,17 +18,22 @@
       <v-list class="pt-0" dense>
         <v-divider></v-divider>
         <v-list-tile v-for="item in items" :key="item.title" @click="">
-          <v-list-tile-content>
-            <a :href="item.link">
-              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-            </a>
-            
-          </v-list-tile-content>
+          <a :href="item.link" style="
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          ">
+            <v-list-tile-content>
+              
+                <v-list-tile-title>{{ item.title }}</v-list-tile-title>                        
+            </v-list-tile-content>
+          </a>
         </v-list-tile>
       </v-list>
 
     </v-navigation-drawer>
-    <v-toolbar fixed class="deep-orange" dark>
+    <v-toolbar fixed class="deep-orange" dark
+      style="z-index: 999;">
       <v-btn fab @click.stop="drawer = !drawer" class=" blue darken-4"><i class="fa fa-bars"></i></v-btn>
       <v-toolbar-title>Toolbar</v-toolbar-title>
     </v-toolbar>

@@ -34,33 +34,67 @@ const app = new Vue({
     	hidden: true
     },
     methods: {
-    	runPralaxBreak(){
-    		$(document).ready(function(){
 
-	    		var windowHeight = $(window).height();
-	    		var scrollTop = $(window).scrollTop();
-	    		var element = $('#paralax');
-	    		var elementFromtop = (element.offset().top - 100) * -1;
-	    		var badImag = $('figure.bad-imag');
-	    		var goodImage = $('.good-img');
-	    		var badWidth = ((scrollTop) + (elementFromtop) ) / 6 + "vw";
-
-	    		if(scrollTop > elementFromtop){
-	    			goodImage.css({
-	    				'width': badWidth
-	    			});
-	    			console.log("el from top = " + elementFromtop);
-	    			console.log("bad width = " + badWidth);
-	    		}
-
-    		});
 		},
-    },
     created(){
-    	window.addEventListener('scroll', this.runPralaxBreak);
     },
     destroyed(){
-    	window.addEventListener('scroll', this.runPralaxBreak);
     }
 });
- 
+
+$(window).scroll(function(){
+
+	var windowHeight = $(window).height();
+	var scrollTop = $(window).scrollTop();
+	var element = $('#paralax');
+	var elementFromtop = (element.offset().top - 100) * -1;
+	var badImag = $('figure.bad-imag');
+	var goodImage = $('.good-img');
+	var badWidth = ((scrollTop) + (elementFromtop) ) / 6 + "vw";
+
+	if(scrollTop > elementFromtop){
+		goodImage.css({
+			'width': badWidth
+		});
+		console.log("el from top = " + elementFromtop);
+		console.log("bad width = " + badWidth);
+	}
+
+}); 
+
+$(document).ready(function(){
+
+	$('#hero-image').change(function(){
+	    $('#header-image-form').css({ 
+	        'background' : 'url(' + window.URL.createObjectURL(this.files[0]) + ')',
+	        'background-size': 'cover',
+	        'background-position': 'center',
+	        'backgroung-repeat': 'no-repeat'
+	         });
+
+	    console.log(window.URL.createObjectURL(this.files[0]));
+	});
+
+	$('#good-image').change(function(){
+	    $('#good-image-form').css({ 
+	        'background' : 'url(' + window.URL.createObjectURL(this.files[0]) + ')',
+	        'background-size': 'cover',
+	        'background-position': 'center',
+	        'backgroung-repeat': 'no-repeat'
+	         });
+
+	    console.log(window.URL.createObjectURL(this.files[0]));
+	});
+
+	$('#bad-image').change(function(){
+	    $('#bad-image-form').css({ 
+	        'background' : 'url(' + window.URL.createObjectURL(this.files[0]) + ')',
+	        'background-size': 'cover',
+	        'background-position': 'center',
+	        'backgroung-repeat': 'no-repeat'
+	         });
+
+	    console.log(window.URL.createObjectURL(this.files[0]));
+	});	
+
+}); 

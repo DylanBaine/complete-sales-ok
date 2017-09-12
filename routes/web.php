@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('front-end.welcome');
-});
+Route::get('/', 'HomePageController@index');
 
 
 Route::post('logout', 'Auth\LoginController@logout');
@@ -22,4 +20,5 @@ Auth::routes();
 
 Route::group(['prefix' => 'home'], function (){
 	Route::get('/', 'HomeController@index');
+	Route::put('/edit-frontpage/{id}', 'HomePageController@edit');
 });

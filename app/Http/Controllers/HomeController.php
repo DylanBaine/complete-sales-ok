@@ -23,6 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('auth.home');
+
+        $homePage = \App\HomePage::get();
+        return view('auth.home', compact('homePage'));
     }
 }

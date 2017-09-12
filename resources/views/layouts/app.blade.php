@@ -26,11 +26,16 @@
         ">
 
             @yield('content')
+
         </layout>
 
         @else
             
             @yield('content')
+
+            <v-footer class="pa-3 grey darken-4">
+                <div>© @{{ new Date().getFullYear() }}</div>
+            </v-footer>
 
         @endif
     </div>
