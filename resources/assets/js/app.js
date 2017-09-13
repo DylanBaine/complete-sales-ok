@@ -32,9 +32,23 @@ Vue.use(Vuetify);
 const app = new Vue({
     el: '#app',
     data: {
-    	hidden: true
+    	hidden: true,
+    	editFrontPage: false,
+    	editSiteInfo: true,
+    	editSEO: true
     },
     methods: {
+
+    	homeForm(){
+    		this.editFrontPage = false;
+    		this.editSiteInfo = true;
+    		this.editSEO = true;
+    	},
+    	infoForm(){
+    		this.editFrontPage = true;
+    		this.editSiteInfo = false;
+    		this.editSEO = true;    		
+    	}
 
 		},
     created(){

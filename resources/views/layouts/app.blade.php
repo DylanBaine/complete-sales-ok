@@ -5,10 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Icon -->
+    <link rel="icon"
+        type="image/png" 
+        href="{{$seo->icon}}">
+
+    <!--Facebook Tags-->
+    <meta property="og:title" content="{{$seo->title}}">
+    <meta property="og:type" content="website"> 
+    <meta property="og:image" content="{{$seo->image}}"> 
+    <meta property="og:url" content="{{$seo->url}}">
+    <meta property="og:description" content="{{$seo->description}}" />  
+
+    <!--Twitter Tags-->
+    <meta name="twitter:title" content="{{$seo->title}}">
+    <meta name="twitter:image" content="{{$seo->image}}">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="{{$seo->description}}" />
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ $seo->title }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">

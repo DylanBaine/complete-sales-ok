@@ -15,23 +15,23 @@ class CreateHomePagesTable extends Migration
     {
         Schema::create('home_pages', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('top_hero_image');
-            $table->string('top_hero_image_alt');
-            $table->string('top_hero_headline');
-            $table->text('top_hero_subline');
-            $table->string('featured_tab_headline');
-            $table->string('featured_tab_subline');
-            $table->string('featured_tab_cta');
-            $table->string('featured_tab_cta_link');
-            $table->string('paralax_bad_image');
-            $table->string('paralax_bad_image_alt');
-            $table->string('paralax_good_image');
-            $table->string('paralax_good_image_alt');
-            $table->text('paralax_text');
-            $table->string('paralax_cta');
-            $table->string('paralax_cta_link');
-            $table->string('all_products_headline');
-            $table->text('all_products_subline');
+            $table->string('top_hero_image')->nullable();
+            $table->string('top_hero_image_alt')->nullable();
+            $table->string('top_hero_headline')->nullable();
+            $table->text('top_hero_subline')->nullable();
+            $table->string('featured_tab_headline')->nullable();
+            $table->string('featured_tab_subline')->nullable();
+            $table->string('featured_tab_cta')->nullable();
+            $table->string('featured_tab_cta_link')->nullable();
+            $table->string('paralax_bad_image')->nullable();
+            $table->string('paralax_bad_image_alt')->nullable();
+            $table->string('paralax_good_image')->nullable();
+            $table->string('paralax_good_image_alt')->nullable();
+            $table->text('paralax_text')->nullable();
+            $table->string('paralax_cta')->nullable();
+            $table->string('paralax_cta_link')->nullable();
+            $table->string('all_products_headline')->nullable();
+            $table->text('all_products_subline')->nullable();
             $table->timestamps();
         });
     }

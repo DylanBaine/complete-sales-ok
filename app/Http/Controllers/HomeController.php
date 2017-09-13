@@ -24,7 +24,9 @@ class HomeController extends Controller
     public function index()
     {
 
-        $homePage = \App\HomePage::get();
-        return view('auth.home', compact('homePage'));
+        $home = \App\HomePage::where('id', 1)->first();
+        $seo = \App\Seo::where('id', 1)->first();
+
+        return view('auth.home', compact('home', 'seo'));
     }
 }

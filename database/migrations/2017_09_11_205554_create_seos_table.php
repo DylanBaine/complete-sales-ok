@@ -15,11 +15,11 @@ class CreateSeosTable extends Migration
     {
         Schema::create('seos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->string('url');
-            $table->text('description');
-            $table->string('image');
-            $table->string('icon');
+            $table->string('title')->nullable();
+            $table->string('url')->nullable();
+            $table->text('description')->nullable();
+            $table->string('image')->nullable();
+            $table->string('icon')->nullable();
             $table->timestamps();
         });
     }

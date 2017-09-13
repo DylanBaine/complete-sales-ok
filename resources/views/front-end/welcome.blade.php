@@ -2,8 +2,6 @@
 
 @section('content')
 
-@foreach($homePage as $home)
-
     <master-header 
 	    header="{{$home->top_hero_headline}}" 
 	    sub="{{$home->top_hero_subline}}" 
@@ -117,7 +115,5 @@
 
 
     </section>
-@endforeach
-
 
 @stop

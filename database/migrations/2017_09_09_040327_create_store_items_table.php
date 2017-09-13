@@ -18,14 +18,14 @@ class CreateStoreItemsTable extends Migration
             $table->string('type');
             $table->string('slug');
             $table->string('title');
-            $table->text('description');
-            $table->string('price');
-            $table->string('brand');
-            $table->string('stock');
+            $table->text('description')->nullable();
+            $table->string('price')->nullable();
+            $table->string('brand')->nullable();
+            $table->string('stock')->nullable();
             $table->string('main_image');
-            $table->string('second_image');
-            $table->string('third_image');
-            $table->string('fourth_image');
+            $table->string('second_image')->nullable();
+            $table->string('third_image')->nullable();
+            $table->string('fourth_image')->nullable();
             $table->timestamps();
         });
     }

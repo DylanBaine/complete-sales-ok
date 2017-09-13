@@ -15,6 +15,9 @@ Route::get('/', 'HomePageController@index');
 
 
 Route::post('logout', 'Auth\LoginController@logout');
+Route::get('/logout-secure', function(){
+	return view('auth.logout');
+});
 
 Auth::routes();
 
@@ -28,4 +31,6 @@ Route::group(['prefix' => 'home'], function (){
 	Route::get('/items/{id}/edit', 'StoreItemController@editView');
 	Route::put('/items/{id}/edit', 'StoreItemController@edit');
 	Route::delete('/items/{id}/delete', 'StoreItemController@delete');
+
+	Route::put('/seo/{id}', 'SeoController@make');
 });

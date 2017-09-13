@@ -19,14 +19,14 @@ class CreatePagesTable extends Migration
             $table->string('is_public');
             $table->string('name');
             $table->string('slug');
-            $table->string('header_image');
+            $table->string('header_image')->nullable();
             $table->string('type'); //ex: About, Contact Us, Special Promo, Generic
             $table->string('header_title');
             $table->text('content');
-            $table->string('featured_item_name');
-            $table->string('featured_item_image');
-            $table->text('featured_item_description');
-            $table->string('featured_item_slug');
+            $table->string('featured_item_name')->nullable();
+            $table->string('featured_item_image')->nullable();
+            $table->text('featured_item_description')->nullable();
+            $table->string('featured_item_slug')->nullable();
             $table->timestamps();
         });
     }

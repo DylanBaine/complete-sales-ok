@@ -15,9 +15,9 @@ class CreateFeaturedItemsTable extends Migration
     {
         Schema::create('featured_items', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('product_image');
+            $table->string('product_image')->nullable();
             $table->string('price');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->string('slug');
             $table->timestamps();
         });

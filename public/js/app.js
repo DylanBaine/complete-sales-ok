@@ -817,9 +817,23 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_vuetify___default.a);
 var app = new Vue({
 	el: '#app',
 	data: {
-		hidden: true
+		hidden: true,
+		editFrontPage: false,
+		editSiteInfo: true,
+		editSEO: true
 	},
-	methods: {},
+	methods: {
+		homeForm: function homeForm() {
+			this.editFrontPage = false;
+			this.editSiteInfo = true;
+			this.editSEO = true;
+		},
+		infoForm: function infoForm() {
+			this.editFrontPage = true;
+			this.editSiteInfo = false;
+			this.editSEO = true;
+		}
+	},
 	created: function created() {},
 	destroyed: function destroyed() {}
 });

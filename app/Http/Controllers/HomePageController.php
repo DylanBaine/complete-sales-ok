@@ -11,8 +11,8 @@ class HomePageController extends Controller
 {
     public function index()
     {
-        $homePage = \App\HomePage::get();
-        return view('front-end.welcome', compact('homePage'));
+        $home = \App\HomePage::where('id', 1)->first();
+        return view('front-end.welcome', compact('home'));
     }
 
     public function edit(Request $request, $id)

@@ -3,6 +3,7 @@
 namespace App\Providers;
 use Schema;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,6 +14,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
+        View::share('seo', \App\Seo::where('id', 1)->first());
+
         Schema::defaultStringLength(191);
     }
 

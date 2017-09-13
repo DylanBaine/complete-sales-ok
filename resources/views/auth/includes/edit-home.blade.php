@@ -1,8 +1,12 @@
-@foreach($homePage as $home)
 <div class="container">
 	
 	<div class="col-md-6 col-md-offset-3">
 		
+		<header class="text-center">
+			<h2>Edit Your front Page</h2>
+		</header>
+		<hr>
+
 		<form enctype="multipart/form-data" action="{{url('home/edit-frontpage/' . $home->id)}}" method="post">
 
 			{{method_field('PUT')}}
@@ -121,4 +125,3 @@
 	</div>
 
 </div>
-@endforeach
