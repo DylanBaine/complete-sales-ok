@@ -21,9 +21,7 @@
     <div v-cloak id="app">
         @if(Auth::user())
             
-        <layout menu="
-            <a href='/'>Home</a>
-        ">
+        <layout>
 
             @yield('content')
 

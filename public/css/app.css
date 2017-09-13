@@ -28408,6 +28408,10 @@ figcaption a {
   top: 18px;
 }
 
+.hidden {
+  display: none;
+}
+
 .title {
   font-size: 84px;
 }
@@ -28461,7 +28465,7 @@ figcaption a {
 
 #master-header .absolute {
   background-color: rgba(0, 0, 0, 0.4);
-  right: 0;
+  right: -200px;
   z-index: 2;
   -webkit-transform: skew(-26deg);
           transform: skew(-26deg);
@@ -28542,12 +28546,24 @@ figcaption a {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.image-form {
+.image-form-closed {
   width: 100%;
-  height: 200px;
+  height: 0px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.image-form {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 [v-cloak] {

@@ -21,4 +21,11 @@ Auth::routes();
 Route::group(['prefix' => 'home'], function (){
 	Route::get('/', 'HomeController@index');
 	Route::put('/edit-frontpage/{id}', 'HomePageController@edit');
+
+	Route::get('/items', 'StoreItemController@index');
+	Route::post('/items/add', 'StoreItemController@addItem');
+
+	Route::get('/items/{id}/edit', 'StoreItemController@editView');
+	Route::put('/items/{id}/edit', 'StoreItemController@edit');
+	Route::delete('/items/{id}/delete', 'StoreItemController@delete');
 });

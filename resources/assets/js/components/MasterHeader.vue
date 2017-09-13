@@ -2,7 +2,7 @@
 
 	<header id="master-header" class="flex-center row position-ref" :style="{backgroundImage: 'url(' + bg + ')'}">
 		
-		<div class="absolute full-height col-md-6"></div>
+		<div class="absolute full-height col-md-8"></div>
 
 		 <div class="header-inner col-md-9">
 		 	<h1>{{header}}</h1>

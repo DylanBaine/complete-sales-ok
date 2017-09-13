@@ -23,7 +23,7 @@ class HomePageController extends Controller
     	{
     		File::delete($homePage->top_hero_image);
     		$heroImage = $request->file('hero-image');
-    		$heroImageUrl = 'storage/' . time() . '.jpg';
+    		$heroImageUrl = 'storage/hero' . time() . '.jpg';
     		Image::make($heroImage)->save(public_path($heroImageUrl));    		
     		$homePage->top_hero_image = $heroImageUrl;
     	}
@@ -39,7 +39,7 @@ class HomePageController extends Controller
     	{
     		File::delete($homePage->paralax_good_image);
     		$pGoodImage = $request->file('good-image');
-    		$pGoodImageUrl = 'storage/' . time() . '.jpg';
+    		$pGoodImageUrl = 'storage/good' . time() . '.jpg';
     		Image::make($pGoodImage)->save(public_path($pGoodImageUrl));    		
     		$homePage->paralax_good_image = $pGoodImageUrl;
     	}
@@ -48,7 +48,7 @@ class HomePageController extends Controller
     	{
     		File::delete($homePage->paralax_bad_image);
     		$pBadImage = $request->file('bad-image');
-    		$pBadImageUrl = 'storage/' . time() . '.jpg';
+    		$pBadImageUrl = 'storage/bad' . time() . '.jpg';
     		Image::make($pBadImage)->save(public_path($pBadImageUrl));    		
     		$homePage->paralax_bad_image = $pBadImageUrl;
     	}

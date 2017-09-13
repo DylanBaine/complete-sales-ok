@@ -25,7 +25,7 @@
     		</div>
     	</header>
     	
-		<featured-trailer 
+		<featured 
 			img="https://placeimg.com/300/200/arch" 
 			title="This is a really nice product!" 
 			summary="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod, tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -33,9 +33,9 @@
 			link="https://pencilrocketcreative.com"
 			price="$3,582">
 
-		</featured-trailer>
+		</featured>
 
-		<featured-trailer 
+		<featured 
 			img="https://placeimg.com/300/200/nature" 
 			title="This is a really nice product!" 
 			summary="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod, tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -43,9 +43,9 @@
 			link="https://pencilrocketcreative.com"
 			price="$4,342">
 
-		</featured-trailer>
+		</featured>
 
-		<featured-trailer 
+		<featured 
 			img="https://placeimg.com/300/200/people" 
 			title="This is a really nice product!" 
 			summary="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod, tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -53,7 +53,7 @@
 			link="https://pencilrocketcreative.com"
 			price="$3,369">
 
-		</featured-trailer>	
+		</featured>	
 
 
     </section>
@@ -84,7 +84,7 @@
     		</div>
     	</header>  
 
-		<featured-trailer 
+		<featured 
 			img="https://placeimg.com/300/200/people" 
 			title="This is a really nice product!" 
 			summary="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod, tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -92,9 +92,9 @@
 			link="https://pencilrocketcreative.com"
 			price="from: $3,369">
 
-		</featured-trailer>	
+		</featured>	
 
-		<featured-trailer 
+		<featured 
 			img="https://placeimg.com/300/200/people" 
 			title="This is a really nice product!" 
 			summary="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod, tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -102,9 +102,9 @@
 			link="https://pencilrocketcreative.com"
 			price="from: $3,369">
 
-		</featured-trailer>	
+		</featured>	
 
-		<featured-trailer 
+		<featured 
 			img="https://placeimg.com/300/200/people" 
 			title="This is a really nice product!" 
 			summary="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod, tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -112,7 +112,7 @@
 			link="https://pencilrocketcreative.com"
 			price="from: $3,369">
 
-		</featured-trailer>	
+		</featured>	
 
 
 

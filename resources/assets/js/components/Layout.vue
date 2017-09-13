@@ -41,7 +41,7 @@
         <slot></slot>
     </main>
     <v-footer class="pa-3">
-        <div>© @{{ new Date().getFullYear() }}</div>
+        <div>© {{ new Date().getFullYear() }}</div>
     </v-footer>    
   </v-app>
 </template>
@@ -59,7 +59,8 @@
         items:[
           {title: 'See Site', link: '/'},
           {title: 'Home', link: '/home'},
-          {title: 'logout', link: '/logout-secure'}
+          {title: 'Items', link: '/home/items'},
+          {title: 'logout', link: '/logout-secure'},
         ],
         right: null
       }

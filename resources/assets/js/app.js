@@ -21,10 +21,11 @@ import Vuetify from 'vuetify';
 Vue.component('example', require('./components/Example.vue'));
 Vue.component('auth-nav', require('./components/AuthNav.vue'));
 Vue.component('master-header', require('./components/MasterHeader.vue'));
-Vue.component('featured-trailer', require('./components/FeaturedTrailer.vue'));
+Vue.component('featured', require('./components/FeaturedTrailer.vue'));
 Vue.component('paralax-break', require('./components/ParalaxBreak.vue'));
 Vue.component('auth-nav', require('./components/AuthNav.vue'));
-Vue.component('layout', require('./components/Layout'));
+Vue.component('layout', require('./components/Layout.vue'));
+Vue.component('item', require('./components/Item.vue'));
 
 Vue.use(Vuetify);
 
@@ -69,7 +70,8 @@ $(document).ready(function(){
 	        'background' : 'url(' + window.URL.createObjectURL(this.files[0]) + ')',
 	        'background-size': 'cover',
 	        'background-position': 'center',
-	        'backgroung-repeat': 'no-repeat'
+	        'backgroung-repeat': 'no-repeat',
+	        'height': '200px'
 	         });
 
 	    console.log(window.URL.createObjectURL(this.files[0]));
@@ -80,7 +82,8 @@ $(document).ready(function(){
 	        'background' : 'url(' + window.URL.createObjectURL(this.files[0]) + ')',
 	        'background-size': 'cover',
 	        'background-position': 'center',
-	        'backgroung-repeat': 'no-repeat'
+	        'backgroung-repeat': 'no-repeat',
+	        'height': '200px'
 	         });
 
 	    console.log(window.URL.createObjectURL(this.files[0]));
@@ -91,10 +94,57 @@ $(document).ready(function(){
 	        'background' : 'url(' + window.URL.createObjectURL(this.files[0]) + ')',
 	        'background-size': 'cover',
 	        'background-position': 'center',
-	        'backgroung-repeat': 'no-repeat'
+	        'backgroung-repeat': 'no-repeat',
+	        'height': '200px'
 	         });
+	});
+
+	$('#main-image').change(function(){
+	    $('#main-image-form').css({ 
+	        'background' : 'url(' + window.URL.createObjectURL(this.files[0]) + ')',
+	        'background-size': 'cover',
+	        'background-position': 'center',
+	        'backgroung-repeat': 'no-repeat',
+	        'height': '300px'
+	    	}); 
 
 	    console.log(window.URL.createObjectURL(this.files[0]));
 	});	
+
+	$('#second-image').change(function(){
+	    $('#second-image-form').css({ 
+	        'background' : 'url(' + window.URL.createObjectURL(this.files[0]) + ')',
+	        'background-size': 'cover',
+	        'background-position': 'center',
+	        'backgroung-repeat': 'no-repeat',
+	        'height': '300px'
+	    	}); 
+
+	    console.log(window.URL.createObjectURL(this.files[0]));
+	});	
+
+	$('#third-image').change(function(){
+	    $('#third-image-form').css({ 
+	        'background' : 'url(' + window.URL.createObjectURL(this.files[0]) + ')',
+	        'background-size': 'cover',
+	        'background-position': 'center',
+	        'backgroung-repeat': 'no-repeat',
+	        'height': '300px'
+	    	}); 
+
+	    console.log(window.URL.createObjectURL(this.files[0]));
+	});	
+
+	$('#fourth-image').change(function(){
+	    $('#fourth-image-form').css({ 
+	        'background' : 'url(' + window.URL.createObjectURL(this.files[0]) + ')',
+	        'background-size': 'cover',
+	        'background-position': 'center',
+	        'backgroung-repeat': 'no-repeat',
+	        'height': '300px'
+	    	});
+
+	    console.log(window.URL.createObjectURL(this.files[0]));
+	});		
 
 }); 
